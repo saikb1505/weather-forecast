@@ -1,0 +1,33 @@
+<head>
+  <link rel="stylesheet" href="/assets/weather.css">
+</head>
+
+<h1 class="weather-title">Weather Forecast</h1>
+
+<div class="form-container">
+  <%= form_with url: forecast_path, method: :post, local: true, html: { class: 'weather-form' } do %>
+    <label for="address" class="form-label">Enter Address:</label>
+    <%= text_field_tag :address, params[:address], class: 'form-input' %>
+    <%= submit_tag "Get Forecast", class: 'form-button' %>
+  <% end %>
+</div>
+
+<% if @weather %>
+  <div class="weather-card">
+    <p class="weather-detail">Temperature: <strong><%= @weather[:current_temp] %> K</strong></p>
+    <p class="weather-detail">Feels Like: <strong><%= @weather[:feels_like] %> K</strong></p>
+    <p class="weather-detail">High: <strong><%= @weather[:high] %> K</strong></p>
+    <p class="weather-detail">Low: <strong><%= @weather[:low] %> K</strong></p>
+    <p class="weather-detail">Humidity: <strong><%= @weather[:humidity] %>%</strong></p>
+    <p class="weather-detail">Wind Speed: <strong><%= @weather[:wind_speed] %> m/s</strong></p>
+    <p class="weather-detail">Visibility: <strong><%= @weather[:visibility] %> meters</strong></p>
+    <p class="weather-detail">Condition: <strong><%= @weather[:description].capitalize %></strong></p>
+    <p class="weather-detail">Forecast: <strong><%= @weather[:extended_forecast] %></strong></p>
+  </div>
+
+  <% if @weather[:from_cache] %>
+    <p class="cache-indicator">(This data was retrieved from cache)</p>
+  <% end %>
+<% else %>
+  <p class="no-data">No weather data available.</p>
+<% end %>

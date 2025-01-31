@@ -1,0 +1,74 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .weather-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .weather-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .form-label {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .form-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-button {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .weather-card {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+  }
+  
+  .weather-detail {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  .cache-indicator {
+    text-align: center;
+    font-style: italic;
+    color: #757575;
+  }
+  
+  .no-data {
+    text-align: center;
+    font-size: 18px;
+    color: #d32f2f;
+  }
+  
