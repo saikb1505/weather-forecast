@@ -25,7 +25,7 @@ Make sure you have the following installed on your machine:
 1. Clone this repository:
 
    ```sh
-   [git clone https://github.com/yourusername/weather-forecast.git](https://github.com/saikb1505/weather-forecast.git)
+   git clone https://github.com/saikb1505/weather-forecast.git
    cd weather-forecast
    ```
 
