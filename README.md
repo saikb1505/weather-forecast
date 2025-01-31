@@ -44,19 +44,13 @@ Make sure you have the following installed on your machine:
      WEATHER_API_KEY=your_actual_api_key
      ```
 
-4. Set up the database (if needed):
-
-   ```sh
-   rails db:migrate
-   ```
-
-5. Start the Rails server:
+4. Start the Rails server:
 
    ```sh
    rails server
    ```
 
-6. Open your browser and visit:
+5. Open your browser and visit:
 
    ```sh
    http://localhost:3000
